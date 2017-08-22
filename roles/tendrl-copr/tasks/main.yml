@@ -18,19 +18,19 @@
     key=/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
     state=present
 
-- name: Install Tendrl Release repo
+- name: Install Tendrl Tendrl repo
   copy:
-    src='tendrl-release-epel-7.repo'
+    src='tendrl-tendrl-epel-7.repo'
     dest=/etc/yum.repos.d
 
-- name: Install Tendrl Release rpm-gpg key
+- name: Install Tendrl Tendrl rpm-gpg key
   copy:
-    src='RPM-GPG-KEY-Tendrl-Release'
+    src='RPM-GPG-KEY-Tendrl-Tendrl'
     dest=/etc/pki/rpm-gpg
 
-- name: Import Tendrl Release rpm-gpg key
+- name: Import Tendrl Tendrl rpm-gpg key
   rpm_key:
-    key=/etc/pki/rpm-gpg/RPM-GPG-KEY-Tendrl-Release
+    key=/etc/pki/rpm-gpg/RPM-GPG-KEY-Tendrl-Tendrl
     state=present
 
 - name: Install Tendrl Dependencies repo
