@@ -12,15 +12,15 @@
     name=tendrl-selinux
     state=latest
 
-- include: firewalld.yml
+- include_tasks: firewalld.yml
   when: configure_firewalld_for_tendrl == True
-- include: etcd.yml
-- include: rsyslog.yml
-- include: tendrl-node-agent.yml
-- include: tendrl-api.yml
-- include: tendrl-ui.yml
-- include: tendrl-monitoring-integration.yml
-- include: tendrl-notifier.yml
+- include_tasks: etcd.yml
+- include_tasks: rsyslog.yml
+- include_tasks: tendrl-node-agent.yml
+- include_tasks: tendrl-api.yml
+- include_tasks: tendrl-ui.yml
+- include_tasks: tendrl-monitoring-integration.yml
+- include_tasks: tendrl-notifier.yml
 
 - name: Enable httpd service
   service:

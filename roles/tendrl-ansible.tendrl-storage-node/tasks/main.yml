@@ -11,7 +11,7 @@
     name=tendrl-collectd-selinux
     state=latest
 
-- include: rsyslog.yml
-- include: tendrl-node-agent.yml
-- include: firewalld.yml
+- include_tasks: rsyslog.yml
+- include_tasks: tendrl-node-agent.yml
+- include_tasks: firewalld.yml
   when: configure_firewalld_for_tendrl == True
